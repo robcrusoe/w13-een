@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ExpenseItem.module.css';
 
 import { format } from 'date-fns';
-import Card from './Card';
+import Card from '../UI/Card';
 
 const ExpenseItem = (props) => {
   const expenseDate = format(props.item.date, 'do MMMM yyyy');

@@ -1,5 +1,5 @@
 import classes from './App.module.css';
-import ExpenseItem from './components/ExpenseItem';
+import ExpenseItem from './components/Expenses/ExpenseItem';
 
 const App = (props) => {
   const expenses = [
