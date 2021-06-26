@@ -2,9 +2,9 @@ import React from 'react';
 import classes from './ExpenseItem.module.css';
 
 const ExpenseItem = (props) => {
-  const expenseDate = new Date(2021, 4, 28).toISOString();
-  const expenseTitle = 'Car Insurance';
-  const expenseAmount = 294.67;
+  const expenseDate = props.item.date.toISOString();
+  const expenseTitle = props.item.title;
+  const expenseAmount = props.item.amount;
 
   return (
     <div className={classes['expense-item']}>
