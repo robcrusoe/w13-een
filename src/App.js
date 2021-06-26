@@ -1,4 +1,5 @@
 import classes from './App.module.css';
+import ExpenseItem from './components/ExpenseItem';
 
 const App = (props) => {
   return (
@@ -6,7 +7,7 @@ const App = (props) => {
       <h1>Hello, World!</h1>
       <p>Let's get started ...</p>
 
-      
+      <ExpenseItem />
     </div>
   );
 };
