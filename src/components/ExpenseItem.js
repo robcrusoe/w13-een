@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './ExpenseItem.module.css';
 
 import { format } from 'date-fns';
+import Card from './Card';
 
 const ExpenseItem = (props) => {
   const expenseDate = format(props.item.date, 'do MMMM yyyy');
@@ -9,7 +10,7 @@ const ExpenseItem = (props) => {
   const expenseAmount = props.item.amount;
 
   return (
-    <div className={classes['expense-item']}>
+    <Card className={classes['expense-item']}>
       <div>
         {expenseDate}
       </div>
@@ -21,7 +22,7 @@ const ExpenseItem = (props) => {
       <div className={classes['expense-item__price']}>
         ${expenseAmount}
       </div>
-    </div>
+    </Card>
   );
 };
 
