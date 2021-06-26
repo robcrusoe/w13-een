@@ -1,8 +1,10 @@
 import React from 'react';
 import classes from './ExpenseItem.module.css';
 
+import { format } from 'date-fns';
+
 const ExpenseItem = (props) => {
-  const expenseDate = props.item.date.toISOString();
+  const expenseDate = format(props.item.date, 'do MMMM yyyy');
   const expenseTitle = props.item.title;
   const expenseAmount = props.item.amount;
 
