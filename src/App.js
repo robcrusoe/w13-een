@@ -1,5 +1,6 @@
 import classes from './App.module.css';
 import ExpenseItem from './components/Expenses/ExpenseItem';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = (props) => {
   const expenses = [
@@ -31,8 +32,8 @@ const App = (props) => {
 
   return (
     <div className={classes.App}>
-      <h1>Hello, World!</h1>
-      <p>Let's get started ...</p>
+      <h1>Hello, There!</h1>
+      <NewExpense />
 
       {expenses.map(expense => <ExpenseItem key={expense.id} item={expense} />)}
     </div>
