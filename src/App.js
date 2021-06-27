@@ -1,9 +1,10 @@
+import React, { useState } from 'react';
 import classes from './App.module.css';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const App = (props) => {
-  const expenses = [
+  const INITIAL_EXPENSES = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -30,10 +31,18 @@ const App = (props) => {
     },
   ];
 
+  const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
+
+  const onAddNewExpense = (newExpense) => {
+    setExpenses((prevState) => {
+      return [...prevState, newExpense];
+    });
+  };
+
   return (
     <div className={classes.App}>
       <h1>Hello, There!</h1>
-      <NewExpense />
+      <NewExpense onAddNewExpense={onAddNewExpense} />
 
       {expenses.map(expense => <ExpenseItem key={expense.id} item={expense} />)}
     </div>
